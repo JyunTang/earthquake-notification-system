@@ -8,6 +8,7 @@ The Earthquake Notification System(ENS) is a web service, that provide a visuali
 
 ## Prerequisites
   - Python 3.4 or later
+  - npm 3.10.3
 
 ## Getting Started
   1. Clone the repository.
@@ -17,8 +18,14 @@ The Earthquake Notification System(ENS) is a web service, that provide a visuali
 ## Backend
     
 ## Frontend
+  - jquery
+  - angular
+  - angular-material	
     
 ## TODO     
 =======
     Earthquake Notification System
+	
+	- Hello World.
+=======
 

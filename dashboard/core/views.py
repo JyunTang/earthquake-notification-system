@@ -4,4 +4,3 @@ from django.http import HttpResponse
 
 def HomeView(request):
     return HttpResponse("Hello, This is a Earthquake Notification System!")
-
