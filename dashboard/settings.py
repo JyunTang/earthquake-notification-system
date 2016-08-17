@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'dashboard.core',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'earthquake_notification_system.urls'
+ROOT_URLCONF = 'dashboard.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'earthquake_notification_system.wsgi.application'
+WSGI_APPLICATION = 'dashboard.wsgi.application'
 
 
 # Database
