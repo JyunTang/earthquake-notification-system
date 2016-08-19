@@ -20,6 +20,6 @@ from dashboard.core import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.HomeView),
+    url(r'^$', views.IndexView.as_view()),
 
 ]

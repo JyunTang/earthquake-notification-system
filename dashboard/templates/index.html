@@ -1,14 +1,13 @@
+
 <!DOCTYPE HTML>
 <html ng-app="ENSapp">
   <head>
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./node_modules/angular/angular.min.js"></script>
-	<script src="./node_modules/angular-animate/angular-animate.min.js"></script>
-	<script src="./node_modules/angular-aria/angular-aria.min.js"></script>
-    <script src="./node_modules/angular_material/angular-material.min.js"></script>
-    <script src="./js/hello.js"></script>
+    <script src="/static/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/static/node_modules/angular/angular.min.js"></script>
+    <script src="/static/js/hello.js"></script>
   </head>
   <body ng-controller="helloCtrl" >
+    <p>Date : {{ now|date }}</p>
     {% verbatim %}      
 	<div>
 	  <label>Name:</label>

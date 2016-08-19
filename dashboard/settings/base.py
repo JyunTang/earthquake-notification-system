@@ -11,9 +11,12 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from os.path import abspath, dirname, join, normpath
+
+DJANGO_ROOT = dirname(dirname(abspath(__file__)))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = dirname(DJANGO_ROOT)
 
 
 # Quick-start development settings - unsuitable for production
@@ -52,10 +55,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'dashboard.urls'
 
+########## TEMPLATE CONFIGURATION
+# See: https://docs.djangoproject.com/en/1.10/ref/settings/#templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            normpath(join(DJANGO_ROOT, 'templates')),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,3 +126,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = normpath(join(BASE_DIR))
+
+STATICFILES_DIRS = (
+    normpath(join(DJANGO_ROOT, 'static')),
+)
