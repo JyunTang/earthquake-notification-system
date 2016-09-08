@@ -1,20 +1,37 @@
+<!DOCTYPE>
+<html>
+<head>
+    <base href="/">
+    <title>Angular 2 Test Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="/static/node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="/static/node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="/static/node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script src="/static/node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="/static/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="/static/node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="/static/node_modules/angular2/bundles/angular2.js"></script>
+    <script src="/static/node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="/static/node_modules/angular2/bundles/http.js"></script>
 
-<!DOCTYPE HTML>
-<html ng-app="ENSapp">
-  <head>
-    <script src="/static/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="/static/node_modules/angular/angular.min.js"></script>
-    <script src="/static/js/hello.js"></script>
-  </head>
-  <body ng-controller="helloCtrl" >
-    <p>Date : {{ now|date }}</p>
-    {% verbatim %}      
-	<div>
-	  <label>Name:</label>
-      <input type="text" ng-model="name" placeholder="Enter a name here">
-      <h1>Hello, {{name}}~</h1>
-      <h1>This is a Earthquake Notification System!</h1> 
-    </div>
-    {% endverbatim %}
-  </body>
+    <link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+<my-app>Loading...</my-app>
+
+<script>
+    System.config({
+        packages: {
+            'static/js': {
+                format: 'register',
+                defaultExtension: 'js'
+            }
+        }
+    });
+    System.import('static/js/boot')
+            .then(null, console.error.bind(console));
+</script>
+</body>
 </html>
