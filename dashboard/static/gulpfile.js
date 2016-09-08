@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 
 var assetsDev = 'assets/';
-var assetsProd = '/';
+var assetsProd = './';
 
 var appDev = 'ts/';
 var appProd = 'js/';
@@ -31,7 +31,7 @@ gulp.task('build-css', function () {
         .pipe(postcss([precss, autoprefixer, cssnano]))
         .pipe(sourcemaps.write())
         .pipe(ext_replace('.css'))
-        .pipe(gulp.dest(assetsProdi+ 'css/'));
+        .pipe(gulp.dest(assetsProd + 'css/'));
 });
 
 gulp.task('build-ts', function () {
