@@ -1,12 +1,14 @@
 import {Component} from 'angular2/core';
-import {ContactListComponent} from './contact/contact-list.component';
+import {CountryListComponent} from './country/country-list.component';
+import {HelloComponent} from './hello/hello.component';
 
 @Component({
     selector: 'my-app',
     template: `
-		<contact-list></contact-list>
+        <hello></hello>
+		<country-list></country-list>
 	`,
-	directives: [ContactListComponent]
+	directives: [HelloComponent,CountryListComponent]
 })
 
 export class AppComponent {
