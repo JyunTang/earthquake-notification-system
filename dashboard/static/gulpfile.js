@@ -62,4 +62,8 @@ gulp.task('watch', function () {
     gulp.watch(assetsDev + 'img/*', ['build-img']);
 });
 
-gulp.task('default', ['watch', 'build-ts', 'build-css']);
+//Want to develop frontend, uncomment following line.
+/*gulp.task('default', ['watch', 'build-ts', 'build-css']);*/
+
+//Want to develop frontend, comment following line.
+gulp.task('default', ['build-ts', 'build-css']);
